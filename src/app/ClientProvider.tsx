@@ -1,16 +1,13 @@
-import Footer from '@/components/shared/Footer';
-import Navbar from '@/components/shared/Navbar';
-import React from 'react';
+"use client";
+import React, { ReactNode } from 'react';
+import { Toaster } from 'react-hot-toast';
 
-const ClientProvider = ({children}: {children: React.ReactNode}) => {
+const ClientProvider = ({children}: {children: ReactNode}) => {
     return (
-        <div>
-            <Navbar/>
-            <div>
-                {children}
-            </div>
-            <Footer/>
-        </div>
+        <React.Fragment>
+            {children}
+            <Toaster/>
+        </React.Fragment>
     )
 }
 
