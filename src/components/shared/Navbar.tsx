@@ -10,23 +10,23 @@ import { HiOutlineUserCircle } from 'react-icons/hi';
 const Navbar = () => {
 
     return (
-        <div className='bg-primary sticky top-0 z-10 h-20'>
-            <div className='container flex items-center justify-between'>
+        <div className='bg-primary sticky top-0 z-10 h-20 flex items-center justify-center'>
+            <div className='container flex items-center justify-between gap-10'>
                 <div>
                     <Image
                         alt='logo'
-                        width={200}
+                        width={150}
                         height={60}
                         src={Logo}
                     />
                 </div>
 
-                <div>
+                <div className='flex-1'>
                     <Input
                         placeholder='Search Product'
                         style={{
-                            width: "100px",
-                            height: 60,
+                            width: "100%",
+                            height: 42,
                             background: "white",
                             border: "none",
                             outline: "none",

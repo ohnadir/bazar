@@ -1,19 +1,21 @@
 
 import React from 'react';
-import banner from "@/assets/Rectangle 1290.png";
+// import banner from "@/assets";
 
 const AuthLayout  = ({children}: {children : React.ReactNode}) => {
     return (
         <div 
-            className='flex items-center justify-end'
+            className='flex items-center justify-center'
             style={{
-                backgroundImage: `url(${banner})`,
+                width: "100%",
+                height: "100vh",
+                backgroundImage: `url('/banner.png')`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover"
             }}
         >
-            <div>
+            <div className='bg-white w-[500px] h-fit rounded-lg bg-opacity-[80%] p-4'>
                 {children}
             </div>
         </div>
