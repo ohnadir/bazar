@@ -1,12 +1,12 @@
-import Footer from '@/components/shared/Footer'
-import Navbar from '@/components/shared/Navbar'
-import React from 'react'
+import React from 'react';
+import Footer from '@/components/shared/Footer';
+import Navbar from '@/components/shared/Navbar';
 
 const layout = ({children}: {children: React.ReactNode}) => {
     return (
         <div>
             <Navbar/>
-            <div className='mt-[96px]'>
+            <div>
                 {children}
             </div>
             <Footer/>
