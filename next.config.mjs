@@ -7,6 +7,11 @@ const nextConfig = {
                 hostname: 'preetheme.com',
                 pathname: '**',
             },
+            {
+                protocol: 'https',
+                hostname: 'res.cloudinary.com',
+                pathname: '**',
+            },
         ],
     },
 };

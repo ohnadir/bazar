@@ -9,7 +9,7 @@ const Category: React.FC = () => {
     <div className='container'>
         <div className='flex items-center gap-6 flex-wrap'>
             {
-                [...Array(5)].map((item, index)=>
+                [...Array(10)].map((_item:any, index:number)=>
                     <Link href={"/"} key={index}>
                         <div className='cursor-pointer w-fit group relative h-fit border-dashed border border-primary p-2 rounded-full'>
                             <Image
@@ -22,7 +22,7 @@ const Category: React.FC = () => {
                             <div 
                                 className='
                                     absolute top-1/2 left-1/2 transform -translate-x-[50%] -translate-y-[50%]  
-                                    w-[80px] h-[80px] rounded-full bg-primary flex items-center justify-center
+                                    w-[100px] h-[100px] rounded-full bg-primary flex items-center justify-center
                                     transition-all duration-200 group-hover:scale-100  scale-0
                                 '
                             >
