@@ -16,8 +16,9 @@ const Banner:React.FC = () => {
     };
 
     return (
-        <div className='container grid grid-cols-12 gap-4'>
-            <div className='col-span-7 rounded-lg' style={{borderRadius: 8}}>
+        <div className='grid grid-cols-12 gap-6'>
+
+            <div className='col-span-7' style={{borderRadius: 8}}>
                 <Slider {...settings}>
                     {
                         [
@@ -27,7 +28,7 @@ const Banner:React.FC = () => {
                         ].map((item:string, index:number)=>{
                             return(
                                 <div className='relative' key={index}>
-                                    <div className='relative h-[300px]' >
+                                    <div className='relative w-full h-[400px]' >
                                         <Image
                                             src={item}
                                             alt="slider image"
@@ -52,7 +53,7 @@ const Banner:React.FC = () => {
                 </Slider>
             </div>
 
-            <div className='col-span-5 border border-red-500'></div>
+            <div className='col-span-5 border border-red-300 h-[400px]'></div>
         </div>
     )
 }

@@ -6,8 +6,7 @@ import { BsPlusLg } from 'react-icons/bs';
 
 const Category: React.FC = () => {
   return (
-    <div className='container'>
-        <div className='flex items-center gap-6 flex-wrap'>
+    <div className='flex items-center gap-6 flex-wrap'>
             {
                 [...Array(10)].map((_item:any, index:number)=>
                     <Link href={"/"} key={index}>
@@ -33,7 +32,6 @@ const Category: React.FC = () => {
                     </Link>
                 )
             }
-        </div>
     </div>
   )
 }
