@@ -2,6 +2,7 @@
 import Advertisement from '@/components/home/Advertisement';
 import Banner from '@/components/home/Banner';
 import Category from '@/components/home/Category';
+import Faq from '@/components/home/Faq';
 import React from 'react'
 
 const HomeClient = () => {
@@ -11,6 +12,7 @@ const HomeClient = () => {
                 <Banner/>
                 <Advertisement/>
                 <Category/>
+                <Faq/>
             </div>
             
         </div>
