@@ -38,11 +38,11 @@ const Navbar = () => {
                 </div>
 
                 <div className='hidden md:flex items-center gap-6'>
-                    <Badge count={5} color='red'>
+                    <Badge count={5} color='#FFEDD5'>
                         <BsCart size={22} style={{color: "white"}} />
                     </Badge>
 
-                    <Badge count={5} color='red'>
+                    <Badge count={5} color='#FFEDD5'>
                         <BiHeart size={22} style={{color: "white"}} />
                     </Badge>
                     <Link href={"/login"}>

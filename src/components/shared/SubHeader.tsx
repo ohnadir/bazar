@@ -1,11 +1,13 @@
 "use client";
 import { Select } from 'antd';
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io";
 import { RiMenuFoldFill, RiMenuUnfoldFill } from "react-icons/ri";
+import Drawer from './Drawer';
 
 const SubHeader:React.FC = () => {
+    const [open, setOpen] = useState(false);
     const item = [
         {
             label: "Home",
@@ -68,10 +70,15 @@ const SubHeader:React.FC = () => {
                 </div>
                 {/* header route container end */}
                 
-                <div className="block md:hidden">
+                {/* mobile device hum burger menu */}
+                <div className="block md:hidden cursor-auto" onClick={()=>setOpen(true)}>
                     <RiMenuFoldFill size={30} color='#10b981' />
                 </div>
             </div>
+
+            {/* drawer container */}
+            <Drawer open={open} setOpen={setOpen} />
+            
         </div>
     )
 }
