@@ -6,6 +6,7 @@ import { Badge, Input } from 'antd';
 import { BiHeart, BiSearch } from 'react-icons/bi';
 import { BsCart } from 'react-icons/bs';
 import { HiOutlineUserCircle } from 'react-icons/hi';
+import Link from 'next/link';
 
 const Navbar = () => {
 
@@ -45,8 +46,10 @@ const Navbar = () => {
                     <Badge count={5} color='red'>
                         <BiHeart size={22} style={{color: "white"}} />
                     </Badge>
-
-                    <HiOutlineUserCircle size={24} style={{color: "white"}} />
+                    <Link href={"/login"}>
+                        <button className='bg-white text-primary border-none outline-none rounded-3xl w-[108px] h-[40px]'>Login</button>
+                    </Link>
+                    {/* <HiOutlineUserCircle size={24} style={{color: "white"}} /> */}
                 </div>
 
             </div>

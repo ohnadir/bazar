@@ -119,10 +119,13 @@ const LoginClient = () => {
                     <Button 
                         htmlType='submit'
                         style={{
-                            width: 150,
-                            height: 50,
-                            background: "#10b981",
-                            color: "#ffffff"
+                            background: "#E6F2F5",
+                            width: 40,
+                            height: 40,
+                            borderRadius: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                         }}
                     >
                        Login

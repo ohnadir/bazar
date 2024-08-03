@@ -8,3 +8,11 @@
 *{
     font-family: "Poppins", sans-serif;
 }
+
+/* style css for sub header select box start */
+.header .ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector{
+    border: none;
+    background: #10b981;
+    color: white;
+}
+/* style css for sub header select box end */
