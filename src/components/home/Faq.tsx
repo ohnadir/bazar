@@ -27,7 +27,7 @@ const Faq: React.FC = () => {
         <div className='container'>
         
         {/* heading of Faq section */}
-        <Heading name='Frequently Asked Questions' style='text-center text-[32px] leading-[48px] text-black font-semibold' />
+        <Heading name='Frequently Asked Questions' style='text-center text-[20px]  md:text-[32px] leading-[38px] md:leading-[48px] text-black font-semibold' />
 
         {/* faq container */}
         <div className='mt-10 grid grid-cols-1 gap-6'>

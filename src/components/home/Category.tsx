@@ -9,7 +9,7 @@ const Category: React.FC = () => {
     <div className='flex items-center gap-6 flex-wrap'>
             {
                 [...Array(10)].map((_item:any, index:number)=>
-                    <Link href={"/"} key={index}>
+                    <Link href={"/"} key={index} className='mx-auto'>
                         <div className='cursor-pointer w-fit group relative h-fit border-dashed border border-primary p-2 rounded-full'>
                             <Image
                                 alt='category Image'
