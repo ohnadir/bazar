@@ -5,14 +5,13 @@ import Logo from "@/assets/logo.svg"
 import { Badge, Input } from 'antd';
 import { BiHeart, BiSearch } from 'react-icons/bi';
 import { BsCart } from 'react-icons/bs';
-import { HiOutlineUserCircle } from 'react-icons/hi';
 import Link from 'next/link';
 
 const Navbar = () => {
 
     return (
-        <div className='bg-primary sticky top-0 z-10 h-20 flex items-center justify-center'>
-            <div className='container flex items-center justify-between gap-10'>
+        <div className='bg-primary sticky top-0 z-20 h-20 flex items-center justify-center'>
+            <div className='container flex items-center justify-center md:justify-between gap-10'>
                 <div>
                     <Image
                         alt='logo'
@@ -22,7 +21,7 @@ const Navbar = () => {
                     />
                 </div>
 
-                <div className='flex-1'>
+                <div className='hidden md:flex-1'>
                     <Input
                         placeholder='Search Product'
                         style={{
@@ -38,7 +37,7 @@ const Navbar = () => {
                     />
                 </div>
 
-                <div className='flex items-center gap-6'>
+                <div className='hidden md:flex items-center gap-6'>
                     <Badge count={5} color='red'>
                         <BsCart size={22} style={{color: "white"}} />
                     </Badge>

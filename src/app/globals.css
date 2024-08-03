@@ -20,6 +20,6 @@ body{
 }
 
 /* slicer slider card padding style start here*/
-.slick-slider .slick-slide:not(:first-child){
+.featured-product .slick-slider .slick-slide:not(:first-child){
     padding: 0 0 0 8px !important;
 }

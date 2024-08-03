@@ -4,7 +4,7 @@ import React from 'react';
 
 const Advertisement:React.FC = () => {
     return (
-        <div className='bg-[#FFEDD5] my-6  rounded-lg p-4 flex items-center justify-between'>
+        <div className='bg-[#FFEDD5] my-6 rounded-lg p-4 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0'>
             <div>
                 <h1 className='text-[16px] leading-6 '>
                     <span className='text-primary font-bold'>100% Natural quality </span>
@@ -16,8 +16,8 @@ const Advertisement:React.FC = () => {
                 </p>
             </div>
 
-            <Link href={"/"}>
-                <button className='bg-primary text-white rounded-lg h-[42px] w-[120px]'>Shop Now</button>
+            <Link href={"/"} className='w-full md:w-[120px]'>
+                <button className='bg-primary text-white rounded-lg h-[42px] w-full md:w-[120px]'>Shop Now</button>
             </Link>
         </div>
     )

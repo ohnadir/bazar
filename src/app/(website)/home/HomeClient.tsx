@@ -8,7 +8,7 @@ import React from 'react'
 
 const HomeClient = () => {
     return (
-        <div className='py-10'>
+        <div className='py-5 md:py-10'>
             <div className='container'>
                 <Banner/>
                 <Advertisement/>

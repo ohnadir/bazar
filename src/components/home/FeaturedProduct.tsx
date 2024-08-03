@@ -73,7 +73,7 @@ const FeaturedProduct: React.FC = () => {
     };
 
     return (
-        <div className="container my-20">
+        <div className="my-20">
 
             <div className='flex items-center justify-between'>
                 {/* heading of Faq section */}
@@ -82,7 +82,7 @@ const FeaturedProduct: React.FC = () => {
             </div>
 
             {/* product container start from here */}
-            <div className="mt-12 md:mt-16 relative">
+            <div className="mt-12 md:mt-16 relative featured-product">
                 <Slider {...settings}>
                     {
                         [...Array(5)].map((_product:any, index:any) => (

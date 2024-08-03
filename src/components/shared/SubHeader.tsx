@@ -2,9 +2,8 @@
 import { Select } from 'antd';
 import Link from 'next/link'
 import React from 'react'
-import { MdKeyboardArrowRight } from 'react-icons/md';
 import { IoIosArrowDown } from "react-icons/io";
-import { RiMenuUnfoldFill } from "react-icons/ri";
+import { RiMenuFoldFill, RiMenuUnfoldFill } from "react-icons/ri";
 
 const SubHeader:React.FC = () => {
     const item = [
@@ -58,7 +57,7 @@ const SubHeader:React.FC = () => {
                 {/* category select container end */}
 
                 {/* header route container start */}
-                <div className="flex items-center gap-10">
+                <div className="hidden md:flex items-center gap-10">
                     {
                         item.map((menu, index) => {
                             return(
@@ -69,6 +68,9 @@ const SubHeader:React.FC = () => {
                 </div>
                 {/* header route container end */}
                 
+                <div className="block md:hidden">
+                    <RiMenuFoldFill size={30} color='#10b981' />
+                </div>
             </div>
         </div>
     )
