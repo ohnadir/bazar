@@ -1,10 +1,10 @@
 import React from 'react'
 import DetailsClient from '../DetailsClient'
 
-const page = () => {
+const page = ({ params: {productId}}: {params: {productId: string}}) => {
     return (
         <React.Fragment>
-            <DetailsClient/>
+            <DetailsClient productId={productId} />
         </React.Fragment>
     )
 }

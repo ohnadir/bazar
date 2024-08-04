@@ -21,28 +21,23 @@ const Navbar = () => {
                     />
                 </div>
 
-                <div className='hidden md:flex-1'>
+                <div className='hidden sm:block flex-1'>
                     <Input
                         placeholder='Search Product'
-                        style={{
-                            width: "100%",
-                            height: 42,
-                            background: "white",
-                            border: "none",
-                            outline: "none",
-                            boxShadow: "none",
-                            borderRadius: 8
-                        }}
-                        suffix={<BiSearch size={24} color='white' />}
+                        className='
+                            placeholder:text-[#000000] placeholder:text-[16px] placeholder:leading-5 
+                            w-full h-[42px] rounded-md bg-white px-3 border-none outline-none shadow-none
+                        '
+                        suffix={<BiSearch size={24}  className='text-secondary' />}
                     />
                 </div>
 
                 <div className='hidden md:flex items-center gap-6'>
-                    <Badge count={5} color='#FFEDD5'>
+                    <Badge count={5} color='#FFEDD5' style={{color: "black"}}>
                         <BsCart size={22} style={{color: "white"}} />
                     </Badge>
 
-                    <Badge count={5} color='#FFEDD5'>
+                    <Badge count={5} color='#FFEDD5' style={{color: "black"}}>
                         <BiHeart size={22} style={{color: "white"}} />
                     </Badge>
                     <Link href={"/login"}>

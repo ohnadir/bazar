@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import Slider, { Settings } from 'react-slick';
 import Heading from '../shared/Heading';
@@ -6,9 +6,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { MdOutlineAddShoppingCart } from 'react-icons/md';
+import ProductDetails from '../ProductDetails';
 
 const FeaturedProduct: React.FC = () => {
-
+    const [open, setOpen] = useState<boolean>(false)
     // left button
     const ArrowLeft = ({ currentSlide, slideCount, ...props }: {currentSlide?: any, slideCount?: any}) => (
         <button {...props} className="absolute z-10 -top-12 right-11 bg-gray-100 p-1 rounded-md flex items-center justify-center">
@@ -85,9 +86,13 @@ const FeaturedProduct: React.FC = () => {
             <div className="mt-12 md:mt-16 relative featured-product">
                 <Slider {...settings}>
                     {
-                        [...Array(5)].map((_product:any, index:any) => (
-                            <Link key={index} href={"/"}>
-                                <div className="bg-gray-100 shadow-sm rounded-md  p-2 relative ">
+                        [...Array(5)].map((_product:any, index:any) => {
+                            return(
+                                <div 
+                                    key={index} 
+                                    className="bg-gray-100 shadow-sm rounded-md  p-2 relative"
+                                    onClick={()=>setOpen(true)}
+                                >
 
                                     {/* product image  */}
                                     <div className="relative w-full h-[220px] overflow-hidden rounded" >
@@ -130,7 +135,7 @@ const FeaturedProduct: React.FC = () => {
 
                                     <div className="flex items-center justify-between px-1 pt-3">
                                         {/* price */}
-                                        <h3 className="text-[555656] font-medium text-xl tracking-tight">Fresh Fruits</h3>
+                                        <h3 className="text-[#555656] font-medium text-xl tracking-tight">Fresh Fruits</h3>
 
                                         {/* product stock count */}
                                         <p className="text-[#929394] text-sm "> 120 pc</p>
@@ -153,13 +158,18 @@ const FeaturedProduct: React.FC = () => {
 
                                     </div>
                                 </div>
-                            </Link>
-                        ))
+                            )
+                        })
                     }
                 </Slider>
             </div>
             {/* product container end */}
-
+            
+            {/* products details modal */}
+            <ProductDetails
+                open={open}
+                setOpen={setOpen}
+            />
         </div>
     )
 }

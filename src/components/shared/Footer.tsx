@@ -44,10 +44,12 @@ const Footer = () => {
     ]
     return (
         <div className='bg-[#EFEEF6]'>
-            <div className='container grid grid-cols-12 py-[30px] gap-6 md:gap-0'>
-                 <Link href={"/"} className='col-span-12 mb-4'>
+            <div className='container grid grid-cols-12 py-[30px] gap-6 md:gap-4'>
+
+                <Link href={"/"} className='col-span-12 mb-4'>
                     <Image alt='Logo' src={Logo} width={188} height={150} />
                 </Link>
+                
                 <div className='col-span-12 sm:col-span-6  md:col-span-4 lg:col-span-4 mx-auto sm:mx-0'>
                     <p className='text-black'>
                         Fusce quis tellus nulla. Donec sodales mauris eget pellentesque hendrerit. Donec molestie 

@@ -1,6 +1,6 @@
 "user client";
 import React from 'react';
-import {Drawer as AntDrawer, Badge} from "antd"
+import {Drawer as AntDrawer, Badge} from "antd";
 import Link from 'next/link';
 import { Bell, Heart, ShoppingCart, X } from 'lucide-react';
 import Logo from "@/assets/logo2.svg";
@@ -11,7 +11,6 @@ interface IDrawerProps{
     open: boolean;
     setOpen: (open: boolean)=> void;
 }
-
 
 const Drawer: React.FC<IDrawerProps> = ({open, setOpen}) => {
 

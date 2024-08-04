@@ -36,14 +36,16 @@ const SubHeader:React.FC = () => {
 
                 {/* category select container start */}
                 <Select
-                    placeholder={<div className="flex items-center gap-4">
-                        <RiMenuUnfoldFill size={20} color="white"/>
-                        <span className='text-white'>Select Category</span>
-                    </div>}
+                    placeholder={
+                        <div className="flex items-center gap-4">
+                            <RiMenuUnfoldFill size={20} color="white"/>
+                            <span className='text-white'>Select Category</span>
+                        </div>
+                    }
                     style={{
-                        width: 300,
                         height: 42
                     }}
+                    className='w-[300px] md:w-[250px] lg:w-[300px]'
                     suffixIcon={<IoIosArrowDown color="white" size={20} />}
                 >
                     {/* select value */}

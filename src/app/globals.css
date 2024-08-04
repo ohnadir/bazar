@@ -23,3 +23,8 @@ body{
 .featured-product .slick-slider .slick-slide:not(:first-child){
     padding: 0 0 0 8px !important;
 }
+
+/* ant design modal footer top margin remove */
+.ant-modal-footer{
+    margin-top: 0 !important;
+}
