@@ -90,7 +90,7 @@ const FeaturedProduct: React.FC = () => {
                             return(
                                 <div 
                                     key={index} 
-                                    className="bg-gray-100 shadow-sm rounded-md  p-2 relative"
+                                    className="bg-gray-100 cursor-pointer shadow-sm rounded-md  p-2 relative"
                                     onClick={()=>setOpen(true)}
                                 >
 

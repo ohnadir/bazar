@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io";
 import { RiMenuFoldFill, RiMenuUnfoldFill } from "react-icons/ri";
-import Drawer from './Drawer';
+import Drawer from './NavDrawer';
 
 const SubHeader:React.FC = () => {
     const [open, setOpen] = useState(false);

@@ -1,14 +1,15 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from "@/assets/logo.svg"
 import { Badge, Input } from 'antd';
 import { BiHeart, BiSearch } from 'react-icons/bi';
 import { BsCart } from 'react-icons/bs';
 import Link from 'next/link';
+import CartDrawer from './CartDrawer';
 
 const Navbar = () => {
-
+    const [open, setOpen] = useState(false);
     return (
         <div className='bg-primary sticky top-0 z-20 h-20 flex items-center justify-center'>
             <div className='container flex items-center justify-center md:justify-between gap-10'>
@@ -34,7 +35,12 @@ const Navbar = () => {
 
                 <div className='hidden md:flex items-center gap-6'>
                     <Badge count={5} color='#FFEDD5' style={{color: "black"}}>
-                        <BsCart size={22} style={{color: "white"}} />
+                        <BsCart 
+                            className='cursor-pointer' 
+                            size={22} 
+                            style={{color: "white"}}
+                            onClick={()=>setOpen(true)}
+                        />
                     </Badge>
 
                     <Badge count={5} color='#FFEDD5' style={{color: "black"}}>
@@ -47,6 +53,7 @@ const Navbar = () => {
                 </div>
 
             </div>
+            <CartDrawer open={open} setOpen={setOpen} />
         </div>
     )
 }

@@ -73,7 +73,7 @@ const ProductDetails: React.FC<IProductDetailsProps> = ({value, open, setOpen}) 
 
                 {/* product details more link */}
                 <div className='w-full flex items-end justify-end mt-3 text-orange-500'>
-                    <Link href={"/product-details"} className='hover:text-third'>
+                    <Link href={"/product-details/2"} className='hover:text-third'>
                         <button>More info</button>
                     </Link>
                 </div>

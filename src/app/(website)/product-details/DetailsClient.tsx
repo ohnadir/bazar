@@ -6,7 +6,7 @@ interface IDetailsProps{
 
 const DetailsClient: React.FC<IDetailsProps> = ({productId}) => {
     return (
-        <div>DetailsClient {productId}</div>
+        <div className='container py-10'>DetailsClient {productId}</div>
     )
 }
 
