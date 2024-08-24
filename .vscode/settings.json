@@ -2,6 +2,7 @@
     "cSpell.ignoreWords": [
         "tailwindcss"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     ],
     "cSpell.words": [
@@ -10,5 +11,10 @@
         "lucide",
         "reduxjs"
 >>>>>>> f5142b8 (feat: :sparkles: implete redux rtk and stripe)
+=======
+    ],
+    "cSpell.words": [
+        "Bkash"
+>>>>>>> ea03d4f (design: :art: design checkout page)
     ]
 }
