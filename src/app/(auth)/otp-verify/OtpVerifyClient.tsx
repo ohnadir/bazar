@@ -1,5 +1,5 @@
 "use client";
-import Heading from "@/components/shared/Heading";
+import Heading from "@/ui/shared/Heading";
 import { Button, Form, Input } from "antd";
 import Link from "next/link";
 import React from "react";

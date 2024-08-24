@@ -99,8 +99,10 @@ const FeaturedProduct: React.FC = () => {
                                         <Image 
                                             src={"https://preetheme.com/html/fruits/assets/img/cate/4.jpg"}
                                             alt="product image"
-                                            fill
-                                            style={{objectFit: "cover"}}
+                                            fill={true}
+                                            priority={true}
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            className="w-auto h-auto  object-fill object-center"
                                         />
                                     </div>
 

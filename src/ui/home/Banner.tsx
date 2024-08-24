@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import Slider, { Settings } from "react-slick";
 
 
@@ -32,8 +31,10 @@ const Banner:React.FC = () => {
                                         <Image
                                             src={item}
                                             alt="slider image"
-                                            fill
-                                            style={{objectFit: "cover"}}
+                                            fill={true}
+                                            priority={true}
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            className="w-auto h-auto  object-fill object-center"
                                         />
                                     </div>
                                 </div>

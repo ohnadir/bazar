@@ -1,5 +1,5 @@
 "use client";
-import Heading from '@/components/shared/Heading';
+import Heading from '@/ui/shared/Heading';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { Eye, EyeOff } from 'lucide-react';
 import Link from 'next/link';
@@ -119,13 +119,13 @@ const LoginClient = () => {
                     <Button 
                         htmlType='submit'
                         style={{
-                            background: "#E6F2F5",
-                            width: 40,
-                            height: 40,
-                            borderRadius: "100%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
+                            width: 150,
+                            height: 48,
+                            border: "none",
+                            outline: "none",
+                            borderRadius: 24,
+                            background: "#10b981",
+                            color: "#ffffff"
                         }}
                     >
                        Login

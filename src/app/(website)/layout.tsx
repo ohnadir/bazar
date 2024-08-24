@@ -1,7 +1,7 @@
 import React from 'react';
-import Footer from '@/components/shared/Footer';
-import Navbar from '@/components/shared/Navbar';
-import SubHeader from '@/components/shared/SubHeader';
+import Footer from '@/ui/shared/Footer';
+import Navbar from '@/ui/shared/Navbar';
+import SubHeader from '@/ui/shared/SubHeader';
 
 const layout = ({children}: {children: React.ReactNode}) => {
     return (

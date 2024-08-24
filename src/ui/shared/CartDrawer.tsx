@@ -39,7 +39,7 @@ const CartDrawer: React.FC<ICartDrawerProps> = ({open, setOpen}) => {
                 {/* body */}
                 <div className='flex-1 p-3 h-full overflow-y-auto'>
                     {
-                        [...Array(10)]?.map((item, index)=>{
+                        [...Array(5)]?.map((item, index)=>{
                             return(
                                 <div className='flex items-center gap-4 mb-3' key={index}>
 

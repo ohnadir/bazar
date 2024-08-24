@@ -1,9 +1,9 @@
 "use client";
-import Advertisement from '@/components/home/Advertisement';
-import Banner from '@/components/home/Banner';
-import Category from '@/components/home/Category';
-import Faq from '@/components/home/Faq';
-import FeaturedProduct from '@/components/home/FeaturedProduct';
+import Advertisement from '@/ui/home/Advertisement';
+import Banner from '@/ui/home/Banner';
+import Category from '@/ui/home/Category';
+import Faq from '@/ui/home/Faq';
+import FeaturedProduct from '@/ui/home/FeaturedProduct';
 import React from 'react'
 
 const HomeClient = () => {

@@ -16,9 +16,8 @@ const Navbar = () => {
                 <div>
                     <Image
                         alt='logo'
-                        width={150}
-                        height={60}
                         src={Logo}
+                        className='w-auto h-auto'
                     />
                 </div>
 
@@ -34,7 +33,7 @@ const Navbar = () => {
                 </div>
 
                 <div className='hidden md:flex items-center gap-6'>
-                    <Badge count={5} color='#FFEDD5' style={{color: "black"}}>
+                    <Badge count={5} color='#FFEDD5' style={{color: "black", cursor: "pointer"}}>
                         <BsCart 
                             className='cursor-pointer' 
                             size={22} 
@@ -44,7 +43,9 @@ const Navbar = () => {
                     </Badge>
 
                     <Badge count={5} color='#FFEDD5' style={{color: "black"}}>
-                        <BiHeart size={22} style={{color: "white"}} />
+                        <Link href={"/wishlist"}>
+                            <BiHeart size={25} style={{color: "white", cursor: "pointer"}} />
+                        </Link>
                     </Badge>
                     <Link href={"/login"}>
                         <button className='bg-white text-primary border-none outline-none rounded-3xl w-[108px] h-[40px]'>Login</button>

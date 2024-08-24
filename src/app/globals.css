@@ -28,3 +28,8 @@ body{
 .ant-modal-footer{
     margin-top: 0 !important;
 }
+
+/* slick slider item padding */
+.slick-slider .slick-slide {
+    padding: 0 4px !important;
+}
