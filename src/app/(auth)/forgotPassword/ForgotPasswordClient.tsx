@@ -1,11 +1,11 @@
 "use client"
 import Heading from '@/ui/shared/Heading';
-import { Form, Input } from 'antd';
 import React from 'react';
 import { useRouter } from "next/navigation";
 import toast from 'react-hot-toast';
 import FormInput from '@/ui/shared/FormInput';
 import Button from '@/ui/shared/Button';
+import { Form } from 'antd';
 
 const ForgotPasswordClient = () => {
     const [form] = Form.useForm();

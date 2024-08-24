@@ -1,14 +1,14 @@
 "use client";
-import React from 'react';
-import Button from '@/ui/shared/Button';
-import FormInput from '@/ui/shared/FormInput';
-import FormPassword from '@/ui/shared/FormPassword';
 import Heading from '@/ui/shared/Heading';
-import { Checkbox, Form } from 'antd';
+import { Checkbox, Form, Input } from 'antd';
+import { Eye, EyeOff } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 import { setToken } from '@/lib/Token';
+import FormInput from '@/ui/shared/FormInput';
+import FormPassword from '@/ui/shared/FormPassword';
+import Button from '@/ui/shared/Button';
 
 const LoginClient = () => {
     const [form] = Form.useForm();
@@ -44,34 +44,12 @@ const LoginClient = () => {
 
                 <Form.Item className='flex items-center justify-center w-full'>
                     <Button 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        htmlType='submit'
-                        style={{
-                            width: 150,
-                            height: 48,
-                            border: "none",
-                            outline: "none",
-                            borderRadius: 24,
-                            background: "#10b981",
-                            color: "#ffffff"
-                        }}
-                    >
-                       Login
-                    </Button>
-=======
                         label='Login' 
                         type='submit'
                         loading={false} 
                         style='w-[150px] bg-primary text-white rounded-[24px]'
                     />
->>>>>>> 9b3ea56 (design: :art: complete checkout page design)
-=======
-                        label='Login' 
-                        type='submit' 
-                        style='w-[150px] bg-primary text-white rounded-[24px]'
-                    />
->>>>>>> f5142b8 (feat: :sparkles: implete redux rtk and stripe)
+
                 </Form.Item>
 
                 <p className="text-[#636363] text-[16px] leading-[21px] font-normal text-center">

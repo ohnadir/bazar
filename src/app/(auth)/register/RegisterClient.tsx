@@ -1,7 +1,6 @@
 "use client"
-import React from 'react';
 import Heading from '@/ui/shared/Heading';
-import { Form } from 'antd';
+import { Form, Input, Select } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
