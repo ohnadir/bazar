@@ -6,11 +6,7 @@ import { Checkbox, ConfigProvider, DatePicker, Form, Input, Radio, theme } from 
 import dayjs from 'dayjs';
 import { Minus, Plus } from 'lucide-react';
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react';
-
-/* import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-const stripePromise = loadStripe('pk_test_51JwnGrLiLwVG3jO00U7B3YmokwdPnB6FKd1uresJgkbsL4f5xUfCmbFdBaGO42KvLmLfVzsgo1oIQToXABSTyypS00xQsEgKZ6'); */
+import React, { useEffect, useState } from 'react'
 
 const CheckoutClient = () => {
     const [quantity, setQuantity] = useState<number>(1);
@@ -22,9 +18,8 @@ const CheckoutClient = () => {
     const handleSubmit=(values: FormDataEvent)=>{
         console.log(values)
     }
+
     const total = 120;
-
-
     return (
         <div className='bg-[#EFEEF6] py-4 h-[calc(100vh-147px)]'>
             
@@ -69,7 +64,7 @@ const CheckoutClient = () => {
                                     }
                                 ]}
                                 style={{marginBottom: 0}}
-                                className='col-span-6 '
+                                className='col-span-6'
                             >
                                 <input 
                                     placeholder='Enter Your Phone Number'
@@ -207,40 +202,6 @@ const CheckoutClient = () => {
                                 </Form.Item>
                             </ConfigProvider>
 
-                            <Form.Item
-                                label={<p className=''>Do you Have Coupon Code?</p>}
-                                style={{marginBottom: 0}}
-                                className='col-span-8'
-                            >
-                                <div className='flex items-center gap-6'>
-                                    <input 
-                                        placeholder='Enter Coupon Code'
-                                        className='
-                                            w-full flex-1 h-10 px-[11px] 
-                                            border-none outline-none 
-                                            rounded-md bg-[#EFEEF6] 
-                                            placeholder:text-[#838383] placeholder:text-[14px] placeholder:font-normal placeholder:leading-6
-                                        '
-                                    />
-                                    <button
-                                        type='button' 
-                                        onClick={()=>{
-                                            const discountPercentage = 10;
-                                            const discountAmount = total * (discountPercentage / 100);
-                                            console.log("discountAmount", discountAmount)
-                                            const finalPrice = total - discountAmount;
-                                            console.log("final price", finalPrice)
-                                            form.setFieldsValue({discount: finalPrice, total : finalPrice})
-                                        }} 
-                                        className='border h-10 border-primary rounded-lg text-primary w-[200px]'
-                                    >
-                                        Apply
-                                    </button>
-                                </div>
-                            </Form.Item>
-
-
-
 
                         </div>
                     </div>
@@ -252,7 +213,7 @@ const CheckoutClient = () => {
                         <div className='pb-4 px-4 flex-1 overflow-y-auto'>
                             <div className='grid grid-cols-1 gap-3'>
                                 {
-                                    [...Array(5)]?.map((item, index)=>{
+                                    [...Array(15)]?.map((item, index)=>{
                                         return(
                                             <div className='flex items-center justify-between' key={index}>
 
@@ -293,15 +254,6 @@ const CheckoutClient = () => {
                                     style={{marginBottom: 0}}
                                 >
                                     <span className='font-semibold'>${Form.useWatch('delivery_charge', form) || 0}</span> 
-                                </Form.Item>
-                            </p>
-                            <p className='flex items-center justify-between text-[16px] leading-6 '>
-                                Discount: 
-                                <Form.Item 
-                                    name={"discount"} 
-                                    style={{marginBottom: 0}}
-                                >
-                                    <span className='font-semibold'>${Form.useWatch('discount', form) || 0}</span> 
                                 </Form.Item>
                             </p>
                         </div>
