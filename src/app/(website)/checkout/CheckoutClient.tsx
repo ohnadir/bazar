@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import Payment from '@/ui/Payment';
-import FormInput from '@/ui/shared/FormInput';
 import Heading from '@/ui/shared/Heading';
 import { Checkbox, ConfigProvider, DatePicker, Form, Input, Radio, theme } from 'antd';
 import dayjs from 'dayjs';
@@ -23,8 +22,7 @@ const CheckoutClient = () => {
     const handleSubmit=(values: FormDataEvent)=>{
         console.log(values)
     }
-    const total =  120;
-    const totals = Form.useWatch('total', form)
+    const total = 120;
 
 
     return (
@@ -38,9 +36,74 @@ const CheckoutClient = () => {
 
                         <div className='grid grid-cols-12 gap-6 mt-4'>
 
-                            <FormInput className='bg-[#EFEEF6]' style='col-span-6 mb-0' name='fullName' label='Full Name' />
-                            <FormInput className='bg-[#EFEEF6]' style='col-span-6 mb-0' name='contact' label='Contact Number' />
-                            <FormInput className='bg-[#EFEEF6]' style='col-span-12 mb-0' name='address' label='Delivery Address' />
+                            <Form.Item
+                                name="name"
+                                rules={[
+                                    {
+                                        required: true,
+                                        message: "Please Enter Your Full Name"
+                                    }
+                                ]}
+                                label={<p className=''>Enter Your Name</p>}
+                                style={{marginBottom: 0}}
+                                className='col-span-6'
+                            >
+                                <input 
+                                    placeholder='Enter Your Full Name'
+                                    className='
+                                        w-full h-10 px-[11px] 
+                                        border-none outline-none 
+                                        rounded-md bg-[#EFEEF6] 
+                                        placeholder:text-[#838383] placeholder:text-[14px] placeholder:font-normal placeholder:leading-6
+                                    '
+                                />
+                            </Form.Item>
+
+                            <Form.Item
+                                name="contact"
+                                label={<p className=''>Contact Number</p>}
+                                rules={[
+                                    {
+                                        required: true,
+                                        message: "Please Enter Phone Number"
+                                    }
+                                ]}
+                                style={{marginBottom: 0}}
+                                className='col-span-6 '
+                            >
+                                <input 
+                                    placeholder='Enter Your Phone Number'
+                                    className='
+                                        w-full h-10 px-[11px] 
+                                        border-none outline-none 
+                                        rounded-md bg-[#EFEEF6] 
+                                        placeholder:text-[#838383] placeholder:text-[14px] placeholder:font-normal placeholder:leading-6
+                                    '
+                                />
+                            </Form.Item>
+
+                            <Form.Item
+                                name="location"
+                                label={<p className=''>Delivery Address</p>}
+                                rules={[
+                                    {
+                                        required: true,
+                                        message: "Please Enter Address!"
+                                    }
+                                ]}
+                                style={{marginBottom: 0}}
+                                className='col-span-12'
+                            >
+                                <input 
+                                    placeholder='Enter Your Address'
+                                    className='
+                                        w-full h-10 px-[11px] 
+                                        border-none outline-none 
+                                        rounded-md bg-[#EFEEF6] 
+                                        placeholder:text-[#838383] placeholder:text-[14px] placeholder:font-normal placeholder:leading-6
+                                    '
+                                />
+                            </Form.Item>
                             
                             <ConfigProvider
                                 theme={{
@@ -163,9 +226,11 @@ const CheckoutClient = () => {
                                         type='button' 
                                         onClick={()=>{
                                             const discountPercentage = 10;
-                                            const discountAmount = totals * (discountPercentage / 100);
-                                            const finalPrice = totals - discountAmount;
-                                            form.setFieldsValue({discount: discountAmount, total : finalPrice})
+                                            const discountAmount = total * (discountPercentage / 100);
+                                            console.log("discountAmount", discountAmount)
+                                            const finalPrice = total - discountAmount;
+                                            console.log("final price", finalPrice)
+                                            form.setFieldsValue({discount: finalPrice, total : finalPrice})
                                         }} 
                                         className='border h-10 border-primary rounded-lg text-primary w-[200px]'
                                     >

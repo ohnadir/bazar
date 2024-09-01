@@ -1,5 +1,14 @@
 {
     "cSpell.ignoreWords": [
         "tailwindcss"
+<<<<<<< HEAD
+=======
+    ],
+    "cSpell.words": [
+        "antd",
+        "Bkash",
+        "lucide",
+        "reduxjs"
+>>>>>>> f5142b8 (feat: :sparkles: implete redux rtk and stripe)
     ]
 }

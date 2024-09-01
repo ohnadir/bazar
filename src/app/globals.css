@@ -33,3 +33,9 @@ body{
 .slick-slider .slick-slide {
     padding: 0 4px !important;
 }
+
+@layer base {
+    #passwordInput {
+        @apply text-[14.8px] font-normal;
+    }
+}

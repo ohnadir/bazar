@@ -5,10 +5,16 @@ import React, { useEffect } from 'react';
 interface IFormInputProps{
     name: string;
     label: string;
+<<<<<<< HEAD
     style?: string; 
 }
 
 const FormPassword:React.FC<IFormInputProps> = ({name, label, style}) => {
+=======
+}
+
+const FormInput:React.FC<IFormInputProps> = ({name, label}) => {
+>>>>>>> f5142b8 (feat: :sparkles: implete redux rtk and stripe)
 
     const form = Form.useFormInstance();
 
@@ -37,7 +43,10 @@ const FormPassword:React.FC<IFormInputProps> = ({name, label, style}) => {
                         message: `Please Enter ${label}`
                     }
                 ]}
+<<<<<<< HEAD
                 className={`${style}`}
+=======
+>>>>>>> f5142b8 (feat: :sparkles: implete redux rtk and stripe)
             >
                 <Input.Password
                     id='passwordInput'
@@ -79,4 +88,8 @@ const FormPassword:React.FC<IFormInputProps> = ({name, label, style}) => {
     )
 }
 
+<<<<<<< HEAD
 export default FormPassword;
+=======
+export default FormInput
+>>>>>>> f5142b8 (feat: :sparkles: implete redux rtk and stripe)
