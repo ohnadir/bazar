@@ -1,11 +1,13 @@
 "use client"
+import React from 'react';
 import Heading from '@/ui/shared/Heading';
-import { Button, Form, Input, Select } from 'antd';
+import { Form } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React from 'react';
 import toast from 'react-hot-toast';
-import { ChevronDown, Eye, EyeOff } from 'lucide-react';
+import FormInput from '@/ui/shared/FormInput';
+import FormPassword from '@/ui/shared/FormPassword';
+import Button from '@/ui/shared/Button';
 
 const RegisterClient = () => {
     const [form] = Form.useForm();
@@ -25,212 +27,20 @@ const RegisterClient = () => {
             <Form 
                 onFinish={handleSubmit} 
                 form={form} layout='vertical'
-                className='grid grid-cols-12 gap-6'
+                className='grid grid-cols-12'
             >
-                <Form.Item
-                    name="name"
-                    label={<p className='font-medium text-[16px] leading-6 text-[#636363]'>User Name</p>}
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please Enter Your Name!"
-                        }
-                    ]}
-                    style={{marginBottom: 0}}
-                    className='col-span-12'
-                >
-                    <Input
-                        placeholder='Enter Your Name'
-                        style={{
-                            width: "100%",
-                            height: 48,
-                            boxShadow: "none",
-                            outline: "none",
-                            border: "1px solid #E0E0E0",
-                            borderRadius: 24,
-                            background: "#FEFEFE"
-                        }}
-                        className='poppins placeholder:text-[#818181] placeholder:text-[14px] placeholder:font-normal placeholder:leading-6'
-                    />
-                </Form.Item>
 
-                <Form.Item
-                    name="email"
-                    label={<p className='font-medium text-[16px] leading-6 text-[#636363]'>Email</p>}
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please Enter Email!"
-                        }
-                    ]}
-                    style={{marginBottom: 0}}
-                    className='col-span-12'
-                >
-                    <Input
-                        placeholder='Enter Email'
-                        style={{
-                            width: "100%",
-                            height: 48,
-                            boxShadow: "none",
-                            outline: "none",
-                            border: "1px solid #E0E0E0",
-                            borderRadius: 24,
-                            background: "#FEFEFE"
-                        }}
-                        className='poppins placeholder:text-[#818181] placeholder:text-[14px] placeholder:font-normal placeholder:leading-6'
-                    />
-                </Form.Item>
+                <FormInput style='col-span-12' name='fullName' label='Full Name' />
+                <FormInput style='col-span-12' name='email' label='Email' />
+                <FormInput style='col-span-12' name='contact' label='Contact No' />
+                <FormPassword style="col-span-12" name='password' label='Password' />
+                <FormPassword style="col-span-12" name='confirm_password' label='Confirm Password' />
 
-                <Form.Item
-                    name="contact"
-                    label={<p className='font-medium text-[16px] leading-6 text-[#636363]'>Contact No</p>}
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please Enter Contact No!"
-                        }
-                    ]}
-                    style={{marginBottom: 0}}
-                    className='col-span-12'
-                >
-                    <Input
-                        placeholder='Enter Contact No'
-                        style={{
-                            width: "100%",
-                            height: 48,
-                            boxShadow: "none",
-                            outline: "none",
-                            border: "1px solid #E0E0E0",
-                            borderRadius: 24,
-                            background: "#FEFEFE"
-                        }}
-                        className='poppins placeholder:text-[#818181] placeholder:text-[14px] placeholder:font-normal placeholder:leading-6'
-                    />
-                </Form.Item>
-
-                <Form.Item
-                    name="password"
-                    label={<p className='font-medium text-[16px] leading-6 text-[#636363]'>Password</p>}
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please Enter Password"
-                        }
-                    ]}
-                    style={{marginBottom: 0}}
-                    className='col-span-12'
-                >
-                    <Input.Password
-                        placeholder='Enter Password'
-                        className='placeholder:text-[#818181] placeholder:text-[16px] placeholder:font-normal placeholder:leading-6'
-                        style={{
-                            width: "100%",
-                            height: 48,
-                            boxShadow: "none",
-                            outline: "none",
-                            border: "1px solid #E0E0E0",
-                            borderRadius: 24,
-                            background: "#FEFEFE",
-                            padding: "4px 4px 4px 11px"
-                        }}
-                        iconRender={(visible) => (
-                            <div
-                                style={{
-                                    background: "#E6F2F5",
-                                    width: 40,
-                                    height: 40,
-                                    borderRadius: "100%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                {
-                                    visible ? (
-                                    <Eye className="cursor-pointer" color="#10b981" size={24} />
-                                    ) : (
-                                    <EyeOff className="cursor-pointer" color="#10b981" size={24} />
-                                    )
-                                }
-                            </div>
-                        )}
-                    />
-                </Form.Item>
-
-                <Form.Item
-                    name="password"
-                    label={<p className='font-medium text-[16px] leading-6 text-[#636363]'>Confirm Password</p>}
-                    rules={[
-                        {
-                            required: true,
-                            message: "Please Enter Confirm Password"
-                        }
-                    ]}
-                    style={{marginBottom: 0}}
-                    className='col-span-12'
-                >
-                    <Input.Password
-                        placeholder='Enter Confirm Password'
-                        className='placeholder:text-[#818181] placeholder:text-[16px] placeholder:font-normal placeholder:leading-6'
-                        style={{
-                            width: "100%",
-                            height: 48,
-                            boxShadow: "none",
-                            outline: "none",
-                            border: "1px solid #E0E0E0",
-                            borderRadius: 24,
-                            background: "#FEFEFE",
-                            padding: "4px 4px 4px 11px"
-                        }}
-                        iconRender={(visible) => (
-                            <div
-                                style={{
-                                    background: "#E6F2F5",
-                                    width: 40,
-                                    height: 40,
-                                    borderRadius: "100%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                {
-                                    visible ? (
-                                    <Eye className="cursor-pointer" color="#10b981" size={24} />
-                                    ) : (
-                                    <EyeOff className="cursor-pointer" color="#10b981" size={24} />
-                                    )
-                                }
-                            </div>
-                        )}
-                    />
-                </Form.Item>
-
-                <Form.Item
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        width: "100%",
-                        marginBottom: 0
-                    }}
-                    className='col-span-12'
-                >
-                    <Button 
-                        htmlType='submit'
-                        style={{
-                            width: 150,
-                            height: 48,
-                            border: "none",
-                            outline: "none",
-                            borderRadius: 24,
-                            background: "#10b981",
-                            color: "#ffffff"
-                        }}
-                    >
-                        {"Sign up"}
-                    </Button>
-                </Form.Item>
+                <Button 
+                    label='Sign up' 
+                    type='submit'
+                    style='col-span-12 mb-6 w-[150px] mx-auto bg-primary text-white rounded-[24px]'
+                />
 
                 <p className="text-[#636363] col-span-12 text-[16px] leading-[21px] font-normal text-center">
                     Have any account? 

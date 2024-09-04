@@ -12,7 +12,7 @@ const OtpVerifyClient = () => {
     form.setFieldsValue(undefined);
 
     const handleSubmit = async (values: any) => {
-        router.push("/login");
+        router.push("/reset-password");
         toast.success("OTP verify Successfully");
     };
 

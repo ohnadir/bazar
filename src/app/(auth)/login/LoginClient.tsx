@@ -117,6 +117,7 @@ const LoginClient = () => {
                     }}
                 >
                     <Button 
+<<<<<<< HEAD
                         htmlType='submit'
                         style={{
                             width: 150,
@@ -130,6 +131,13 @@ const LoginClient = () => {
                     >
                        Login
                     </Button>
+=======
+                        label='Login' 
+                        type='submit'
+                        loading={false} 
+                        style='w-[150px] bg-primary text-white rounded-[24px]'
+                    />
+>>>>>>> 9b3ea56 (design: :art: complete checkout page design)
                 </Form.Item>
 
                 <p className="text-[#636363] text-[16px] leading-[21px] font-normal text-center">
