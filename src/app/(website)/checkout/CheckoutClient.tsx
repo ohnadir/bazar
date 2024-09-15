@@ -6,7 +6,12 @@ import { Checkbox, ConfigProvider, DatePicker, Form, Input, Radio, theme } from 
 import dayjs from 'dayjs';
 import { Minus, Plus } from 'lucide-react';
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+
+/* import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+const stripePromise = loadStripe('pk_test_51JwnGrLiLwVG3jO00U7B3YmokwdPnB6FKd1uresJgkbsL4f5xUfCmbFdBaGO42KvLmLfVzsgo1oIQToXABSTyypS00xQsEgKZ6'); 
+*/
 
 const CheckoutClient = () => {
     const [quantity, setQuantity] = useState<number>(1);
